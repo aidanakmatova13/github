@@ -1,0 +1,8 @@
+td a{
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+td a:hover{
+    color: lightslategray;
+}

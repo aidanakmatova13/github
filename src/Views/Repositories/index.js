@@ -3,6 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 import axios from "axios";
 import Layout from "../../Components/Layout";
 import './style.css'
+import Goback from "../../Components/Goback";
 
 
 const Repositories = () => {
@@ -17,6 +18,7 @@ const Repositories = () => {
     return (
         <Layout>
             <div className='container'>
+                <Goback/>
                 <table className="table my-5">
                     <thead className='table-top'>
                     <tr>
