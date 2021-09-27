@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import Layout from "../../Components/Layout";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
+import './style.css'
 
 
 const Readme = () => {
@@ -16,9 +17,12 @@ const Readme = () => {
 
     return (
         <Layout>
-            <Markdown>
-                {readme}
-            </Markdown>
+            {
+                readme ? <Markdown className='container'>
+                    {readme}
+                </Markdown>
+                    : <div className='readme'>No README.md</div>
+            }
         </Layout>
     );
 };

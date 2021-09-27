@@ -1,0 +1,19 @@
+.content{
+    text-align: center;
+    height: 100vh;
+    padding-top: 20vh;
+}
+.home{
+    background-color: lightslategray;
+    height: 100vh;
+}
+.button{
+    border: none;
+    background-color: transparent;
+}
+.input{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+

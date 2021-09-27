@@ -14,16 +14,17 @@ const Header = () => {
     }, [username])
 
     return (
-        <header className='header bg-dark text-white d-flex align-items-center justify-content-between'>
+        <header className='header p-4 bg-dark text-white d-flex align-items-center justify-content-between'>
             <div className='d-flex align-items-center'>
-                <img className='avatar' src={user.avatar_url} alt="" width='100'/>
-                <h3 className='ms-3'>{user.login}</h3>
+                <img className='avatar' src={user.avatar_url} alt="" width='60'/>
+                <h4 className='ms-3'>{user.login}</h4>
             </div>
             <div>
-                <input type="text" placeholder='search'/>
+                <input className='input' type="text" placeholder='search'/>
             </div>
         </header>
     );
 };
+
 
 export default Header;
