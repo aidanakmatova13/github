@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 import axios from "axios";
 import Layout from "../../Components/Layout";
 import './style.css'
-import Goback from "../../Components/Goback";
+import GoBack from "../../Components/GoBack";
 
 
 const Repositories = () => {
@@ -18,31 +18,31 @@ const Repositories = () => {
     return (
         <Layout>
             <div className='container'>
-                <Goback/>
+                <GoBack/>
                 <table className="table my-5">
-                    <thead className='table-top'>
-                    <tr>
-                        <th scope="col">№</th>
-                        <th scope="col">Project name</th>
-                        <th scope="col">Created at</th>
-                        <th scope="col">Readme.md</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {
-                        projects.map((el, idx) =>
-                            <tr>
-                                <th scope="row">{idx + 1}</th>
-                                <td>{el.name}</td>
-                                <td>{el.created_at}</td>
-                                <td><Link to={`/${username}/${el.name}`}>
-                                    README.md
-                                </Link></td>
-                            </tr>
-                        )
-                    }
-                    </tbody>
-                </table>
+                        <thead className='table-top'>
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Project name</th>
+                            <th scope="col">Created at</th>
+                            <th scope="col">Readme.md</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            projects.map((el, idx) =>
+                                <tr>
+                                    <th scope="row">{idx + 1}</th>
+                                    <td>{el.name}</td>
+                                    <td>{el.created_at}</td>
+                                    <td><Link to={`/${username}/${el.name}`}>
+                                        README.md
+                                    </Link></td>
+                                </tr>
+                            )
+                        }
+                        </tbody>
+                    </table>
             </div>
         </Layout>
     );

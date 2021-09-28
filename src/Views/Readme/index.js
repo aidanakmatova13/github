@@ -4,7 +4,7 @@ import Layout from "../../Components/Layout";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import './style.css'
-import Goback from "../../Components/Goback";
+import GoBack from "../../Components/GoBack";
 
 
 const Readme = () => {
@@ -18,7 +18,7 @@ const Readme = () => {
 
     return (
         <Layout>
-            <Goback/>
+            <GoBack/>
             {
                 readme ? <Markdown className='container'>
                     {readme}
